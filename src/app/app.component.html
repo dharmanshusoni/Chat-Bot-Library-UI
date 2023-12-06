@@ -4,10 +4,13 @@
     <span id="close-btn" (click)="toggleChat()">×</span>
   </header>
   <div class="content">
-    <div class="message" 
+    <div 
     *ngFor="let message of chatMessages" 
-    [ngClass]="{'user-message': !message.isUser, 'bot-message': message.isUser}">
-      {{ message.content }}
+    [ngClass]="message.class">
+    <div *ngIf="!message.isButton">{{ message.content }}</div>
+    <div *ngIf="message.isButton" class="button-container">
+      <button (click)="handleButtonClick(message.buttonAction)">{{ message.buttonLabel }}</button>
+    </div>
     </div>
     <div id="user-input">
       <input type="text" [(ngModel)]="userInput" placeholder="Type your message..." />

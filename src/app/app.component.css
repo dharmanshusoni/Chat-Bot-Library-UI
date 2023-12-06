@@ -1,8 +1,3 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-
   #chat-button {
     position: fixed;
     bottom: 20px;
@@ -69,26 +64,28 @@ body {
     overflow: hidden;
   }
 
-  #chat-popup .user-message {
-    text-align: right;
+  #chat-popup .bot-message {
+    text-align: left;
     background-color: #4c53af;
     color: white;
     border: 1px solid #4c53af;
     padding: 10px;
-    margin-right: 10%;
+    margin-right: 20%;
     /* Adjust right margin */
   }
 
-  #chat-popup .bot-message {
-    text-align: left;
+  #chat-popup .user-message {
+    text-align: right;
     background-color: #f1f1f1;
     color: #333;
     border: 1px solid #ddd;
     padding: 10px;
-    margin-left: 10%;
+    margin-left: 20%;
     /* Adjust left margin */
   }
-
+  #chat-popup .user-message-option{
+    text-align: right;
+  }
   #user-input {
     display: flex;
     justify-content: space-between;
@@ -111,3 +108,17 @@ body {
     border-radius: 5px;
     cursor: pointer;
   }
+
+.button-container button {
+  padding: 8px 16px;
+  border: 2px solid #4CAF50; /* Set border color */
+  border-radius: 5px;
+  background-color: white;
+  color: #4CAF50;
+  cursor: pointer;
+}
+
+.button-container button:hover {
+  background-color: #4CAF50;
+  color: white;
+}
