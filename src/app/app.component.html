@@ -1,0 +1,19 @@
+<div id="chat-popup">
+  <header>
+    Chat Bot
+    <span id="close-btn" (click)="toggleChat()">×</span>
+  </header>
+  <div class="content">
+    <div class="message" 
+    *ngFor="let message of chatMessages" 
+    [ngClass]="{'user-message': !message.isUser, 'bot-message': message.isUser}">
+      {{ message.content }}
+    </div>
+    <div id="user-input">
+      <input type="text" [(ngModel)]="userInput" placeholder="Type your message..." />
+      <button id="send-btn" (click)="sendMessage()">Send</button>
+    </div>
+  </div>
+</div>
+<button id="chat-button" (click)="toggleChat()"><i class="fa fa-whatsapp"></i></button>
+<router-outlet></router-outlet>
