@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src\\app"
   ],
-  "SelectedNode": "\\C:\\Git\\Chat-Bot-Library-UI",
+  "SelectedNode": "\\src",
   "PreviewInSolutionExplorer": false
 }
